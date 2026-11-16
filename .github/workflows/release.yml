@@ -18,7 +18,6 @@ jobs:
       - uses: actions/setup-go@v7
         with:
           go-version: '1.25'
-          cache: false
       - run: go mod download
       - run: go test ./...
       - run: go vet ./...

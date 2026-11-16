@@ -4,8 +4,21 @@ Récupère le menu du jour et l'envoie sur Slack via un webhook.
 
 ## Utilisation
 
-```sh
-./cote-resto [options] URL_MENU URL_WEBHOOK [CANAL]
+```
+NAME:
+   cote-resto - Récupère le menu du jour et l'envoie à Slack.
+
+USAGE:
+   cote-resto [global options] <url-menu> <url-webhook> [<canal-slack>]
+
+GLOBAL OPTIONS:
+   --timezone string   fuseau horaire du menu (default: "Europe/Paris")
+   --exclude string    fragments de noms de stands à exclure, séparés par des virgules
+   --timeout duration  délai maximal des requêtes HTTP (default: 10s)
+   --icon-url string   URL de l'icône Slack (default: "https://click-collect-pwa-z27s67eciq-ew.a.run.app/icons/favicon-96x96.png")
+   --username string   nom Slack personnalisé (vide : nom basé sur la date)
+   --verbose           affiche les étapes de récupération et d'envoi
+   --help, -h          show help
 ```
 
 Exemple :
